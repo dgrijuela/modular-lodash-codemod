@@ -22,3 +22,9 @@ npm install -g jscodeshift
 git clone https://github.com/dgrijuela/modular-lodash-codemod.git
 jscodeshift -t modular-lodash-codemod/modular-lodash.js <your-project-dir>
 ```
+
+Check both JS and JSX files using the `--extensions` flag:
+
+```
+jscodeshift -t --extensions=js,jsx modular-lodash-codemod/modular-lodash.js <your-project-dir>
+```
