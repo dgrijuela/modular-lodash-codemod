@@ -7,7 +7,6 @@ function isLodashImport(node) {
 }
 
 function transformImport(j) {
-  console.log(j.__methods);
   return ast => {
     ast.node.source = j.literal("lodash");
     const imports = ast.value.specifiers;
@@ -29,9 +28,6 @@ module.exports = function(fileInfo, { jscodeshift: j }, argOptions) {
 
   // Cache opening comments/position
   const { comments, loc } = ast.find(j.Program).get("body", 0).node;
-  console.log("comments", comments);
-
-  console.log("loc", loc);
 
   ast // import _ from 'lodash'
     .find(j.ImportDeclaration, isLodashImport)
