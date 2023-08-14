@@ -26,5 +26,5 @@ jscodeshift -t modular-lodash-codemod/modular-lodash.js <your-project-dir>
 Check both JS and JSX files using the `--extensions` flag:
 
 ```
-jscodeshift -t --extensions=js,jsx modular-lodash-codemod/modular-lodash.js <your-project-dir>
+jscodeshift --extensions=js,jsx -t modular-lodash-codemod/modular-lodash.js <your-project-dir>
 ```
